@@ -1,0 +1,33 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>341</LabelID>
+    <LabelName>按拼音排序字母查询出狗狗类型</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam>Diccate,0,1,字段类型|Zm,,1,字母|ShowNum,10,1,显示个数</LabelParam>
+    <LabelTable>ZL_Datadic</LabelTable>
+    <LabelField>Dicname</LabelField>
+    <LabelWhere>Diccate=@Diccate AND   left(dbo.f_GetPy(Dicname),1)='@Zm'</LabelWhere>
+    <LabelOrder>Dicname collate Chinese_PRC_CI_AS_KS_WS asc</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;a href="{ZL:GetNodeListUrl(24)/}?qz={Field="Dicname"/}"&gt;{Field="Dicname"/}&lt;/a&gt;&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Datadic","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

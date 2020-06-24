@@ -1,0 +1,55 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>323</LabelID>
+    <LabelName>全站头部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;nav class="navbar navbar-expand-lg fixed-top home_navbar"&gt; 
+&lt;div class="container"&gt; &lt;a class="navbar-brand" href="/"&gt;&lt;img src="{$LogoUrl/}" alt="{$SiteName/}"&gt;&lt;/a&gt;
+    &lt;button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation"&gt;&lt;i class="zi zi_menu" &gt;&lt;/i&gt;&lt;/button&gt;
+    &lt;div class="collapse navbar-collapse" id="navbarsExample07"&gt;
+      &lt;ul class="navbar-nav ml-auto"&gt;
+        &lt;li class="nav-item active"&gt; &lt;a class="nav-link" href="/"&gt;首页&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetInfoUrl(2)/}"&gt;关于平台&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(1)/}"&gt;资讯栏目&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(2)/}"&gt;知识专区&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(13)/}"&gt;专家频道&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(24)/}"&gt;医生专区x问答中心&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetInfoUrl(3)/}"&gt;联系我们&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="{ZL:GetNodeLinkUrl(12)/}"&gt;帮助&lt;/a&gt;&lt;/li&gt;
+		&lt;li class="nav-item"&gt;
+			&lt;a class="nav-link weixin_link" href="#"&gt;&lt;img class="weixin" src="{$CssDir/}Images/weixin.png" alt="微信收听"&gt;
+				&lt;div class="weixin_box"&gt;&lt;img src="{$CssDir/}Images/QRcode.jpg" alt=""&gt;&lt;/div&gt;
+			&lt;/a&gt;
+		&lt;/li&gt;
+		&lt;li class="nav-item"&gt;&lt;a class="nav-link" href="/user"&gt;&lt;i class="zi zi_plus" aria-hidden="true"&gt;&lt;/i&gt;会员中心&lt;/a&gt;
+		&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+  &lt;/nav&gt;
+&lt;!--navbar end	--&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

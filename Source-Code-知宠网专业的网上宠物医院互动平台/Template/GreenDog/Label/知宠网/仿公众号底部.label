@@ -1,0 +1,76 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>359</LabelID>
+    <LabelName>仿公众号底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;section class="wx_bottom  	d-block d-sm-none"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class="btn-group dropup"&gt;
+  &lt;button type="button" class="btn dropdown-toggle" data-toggle="dropdown" &gt;
+    医宠问答
+  &lt;/button&gt;
+  &lt;div class="dropdown-menu"&gt;
+    &lt;a class="dropdown-item" href="{ZL:GetNodeLinkUrl(27)/}"&gt;细小专区&lt;/a&gt;
+	&lt;a class="dropdown-item" href="{ZL:GetNodeLinkUrl(28)/}"&gt;肠胃专区&lt;/a&gt;
+	&lt;a class="dropdown-item" href="/User/Register"&gt;宠医注册&lt;/a&gt;
+	&lt;a class="dropdown-item" href="/user/Content/AddContent?NodeID=24&amp;ModelID=51"&gt;我要提问&lt;/a&gt;
+	&lt;a class="dropdown-item" href="{ZL:GetNodeLinkUrl(24)/}"&gt;精确搜索&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class="btn-group dropup"&gt;
+  &lt;button type="button" class="btn dropdown-toggle" data-toggle="dropdown" &gt;
+    养宠常识
+  &lt;/button&gt;
+  &lt;div class="dropdown-menu"&gt;
+    &lt;a class="dropdown-item" href="{ZL:GetNodeLinkUrl(8)/}"&gt;疾病专区&lt;/a&gt;
+	&lt;a class="dropdown-item" href="{ZL:GetNodeLinkUrl(10)/}"&gt;训练方法&lt;/a&gt;
+	&lt;a class="dropdown-item" href="{ZL:GetNodeLinkUrl(9)/}"&gt;喂养常识&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;div class="btn-group dropup"&gt;
+  &lt;button type="button" class="btn dropdown-toggle" data-toggle="dropdown" &gt;
+    个人专区
+  &lt;/button&gt;
+  &lt;div class="dropdown-menu"&gt;
+    &lt;a class="dropdown-item" href="/User"&gt;个人中心&lt;/a&gt;
+    &lt;a class="dropdown-item" href="/Class_24/NodeNews.aspx"&gt;我的问答&lt;/a&gt;
+	&lt;a class="dropdown-item" href="{ZL:GetHotinfo(24)/}"&gt;我的收藏&lt;/a&gt;
+	&lt;a class="dropdown-item" href="/Class_13/NodePage.aspx"&gt;医生专区&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="clearfix"&gt;&lt;/div&gt;
+&lt;/section&gt;
+&lt;!--bottom end--&gt;
+</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

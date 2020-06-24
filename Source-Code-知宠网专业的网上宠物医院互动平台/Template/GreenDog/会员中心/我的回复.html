@@ -1,0 +1,91 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我参与的问题_{$SiteTitle/}</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot4()/}
+<link href="{$CssDir/}global.css?id={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>	
+</head> 
+<body>
+<header class="myquestion_header">
+{ZL.Label id="全站头部"/}
+</header>
+<!---header end-->
+
+
+
+
+<section class="container myanswer">
+<strong><i class="zi zi_commentalt"></i> 我的回复</strong>
+<ul>
+
+{ZL.Label id="按会员ID抽取评论" NodeID="34" ShowNum="20" TitleNum="30" /}
+
+{$GetRequest(uid)$}
+<a href="{ZL:GetNodeLinkUrl(13)/}" class="btn btn-success btn-block">进入问题中心</a>
+
+<hr>
+<!--<li>
+<div class="myanswer_top"><span class="myanswer_top_w"> 问：</span>教小兔子教小兔上厕所的方法？</div>
+<div class="myanswer_bottom"><span class="myanswer_top_d">答：</span>将兔子的NN用纸巾吸好放在厕所了，也放进去。经常把兔子赶到厕所上呆着？</div>
+</li>
+</ul>
+-->
+
+</section>
+
+
+
+
+
+{ZL.Label id="全站底部"/}
+{ZL.Label id="网友提问"/}
+{ZL.Label id="侧边客服"/}
+{ZL.Label id="仿公众号底部"/}
+{ZL.Label id="四叶草插件"/}	
+<script>
+$(".navbar04").addClass("active");
+//轮播active
+$(function(){
+	$(".carousel-inner .carousel-item:first-child").first().addClass('active');
+})
+$(function(){
+	$(".solu-item-warp:nth-child(3)").addClass('solu-item-active');
+})
+
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+
+
+</script>
+</body>
+</html>

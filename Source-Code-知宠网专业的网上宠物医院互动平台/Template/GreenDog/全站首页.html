@@ -1,0 +1,538 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="msapplication-TileColor" content="#1A0066"/>
+<meta name="msapplication-TileImage" content="/images/win8_symbol_140x140.png"/>
+<title>{$SiteName/}_首页</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot4()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+{ZL:GetCSS(1,0)/}
+<link href="/dist/css/animate.min.css" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js"></script>
+<script src="{$CssDir/}js/solu.js"></script>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+</head>
+<body>
+<header>
+<nav class="navbar navbar-expand-lg fixed-top home_navbar">
+  <div class="container"> <a class="navbar-brand" href="/"><img src="{$LogoUrl/}" alt="{$SiteName/}"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation"><i class="zi zi_menu" ></i></button>
+    <div class="collapse navbar-collapse" id="navbarsExample07">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active"> <a class="nav-link" href="/">首页</a></li>
+        <li class="nav-item"><a class="nav-link" href="{ZL:GetInfoUrl(2)/}">关于平台</a></li>
+        <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(1)/}">资讯栏目</a></li>
+		<li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(2)/}">知识专区</a></li>
+        <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(13)/}">专家频道</a></li>
+        <li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(24)/}">医生专区x问答中心</a></li>
+		<li class="nav-item"><a class="nav-link" href="/baike">百科</a></li>
+		<li class="nav-item"><a class="nav-link" href="{ZL:GetNodeLinkUrl(12)/}">帮助</a></li>
+		<li class="nav-item">
+			<a class="nav-link weixin_link" href="#"><img class="weixin" src="{$CssDir/}Images/weixin.png" alt="微信收听">
+				<div class="weixin_box"><img src="{$CssDir/}Images/QRcode.jpg" alt=""></div>
+			</a>
+		</li>
+		<li class="nav-item"><a class="nav-link" href="/user"><i class="zi zi_plus"></i>会员中心</a>
+		</li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--navbar end-->	
+
+
+<section class="home_banner">
+<div class="container">
+<h1>宠物问题尽在知宠</h1>
+<div class="banner_jqss">
+<p>使用精确搜索-快速查到您要咨询的问题：</p>
+<form action="/Class_24/Default.aspx" method="get">
+<div class="custom-select banner_xzqz" id="Select01">
+<div class="select_selected" data-select-picker><span>选择犬种</span><i class="zi zi_pathDown" ></i></div>
+<div class="select_option" data-select-dropdown>
+<div class="option-wrapper">
+<div class="brand" data-select-brand>
+<ol class="index"><li data-target="#jump-rm" class="active">热</li><li data-target="#jump-A" class="">A</li><li data-target="#jump-B" class="">B</li><li data-target="#jump-C" class="">C</li><li data-target="#jump-D" class="">D</li><li data-target="#jump-F" class="">F</li><li data-target="#jump-G" class="">G</li><li data-target="#jump-H" class="">H</li><li data-target="#jump-I" class="">I</li><li data-target="#jump-J">J</li><li data-target="#jump-K">K</li><li data-target="#jump-L">L</li><li data-target="#jump-M">M</li><li data-target="#jump-N">N</li><li data-target="#jump-O">O</li><li data-target="#jump-P">P</li><li data-target="#jump-Q">Q</li><li data-target="#jump-R">R</li><li data-target="#jump-S">S</li><li data-target="#jump-T">T</li><li data-target="#jump-W">W</li><li data-target="#jump-X">X</li><li data-target="#jump-Y">Y</li><li data-target="#jump-Z">Z</li></ol>
+<dl class="list">
+<dt id="jump-rm">热门</dt>
+<dd data-text="边境牧羊犬" data-target="brand">边境牧羊犬</dd>
+<dd data-text="泰迪" data-target="brand">泰迪</dd>
+<dd data-text="约克夏" data-target="brand">约克夏</dd>
+<dd data-text="金毛" data-target="brand">金毛</dd>
+<dd data-text="比熊" data-target="brand">比熊</dd>
+<dd data-text="雪纳瑞" data-target="brand">雪纳瑞</dd>
+<dd data-text="柴犬" data-target="brand">柴犬</dd>
+<dd data-text="柯基" data-target="brand">柯基</dd>
+<dd data-text="萨摩耶" data-target="brand">边境牧羊犬</dd>
+<dd data-text="阿拉斯加" data-target="brand">泰迪</dd>
+<dd data-text="哈士奇" data-target="brand">约克夏</dd>
+<dd data-text="藏獒" data-target="brand">金毛</dd>
+<dd data-text="贵宾犬" data-target="brand">比熊</dd>
+<dd data-text="松狮" data-target="brand">雪纳瑞</dd>
+<dd data-text="吉娃娃" data-target="brand">柴犬</dd>
+<dd data-text="喜乐蒂牧羊犬" data-target="brand">柯基</dd>
+<dd data-text="苏格兰牧羊犬" data-target="brand">边境牧羊犬</dd>
+<dd data-text="拉布拉多" data-target="brand">泰迪</dd>
+<dd data-text="德牧" data-target="brand">约克夏</dd>
+<dd data-text="博美犬" data-target="brand">金毛</dd>
+<dd data-text="大白熊犬" data-target="brand">比熊</dd>
+<dd data-text="法国斗牛犬" data-target="brand">雪纳瑞</dd>
+<dd data-text="英国斗牛犬" data-target="brand">柴犬</dd>
+<dd data-text="阿富汗" data-target="brand">柯基</dd>
+<dd data-text="西高地白梗" data-target="brand">边境牧羊犬</dd>
+<dd data-text="小鹿犬" data-target="brand">泰迪</dd>
+<dd data-text="巴哥犬" data-target="brand">约克夏</dd>
+<dd data-text="西施犬" data-target="brand">金毛</dd>
+<dd data-text="腊肠犬" data-target="brand">比熊</dd>
+<dd data-text="比格犬" data-target="brand">雪纳瑞</dd>
+<dt id="jump-A">A</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="A" ShowNum="10" /}
+<dt id="jump-B">B</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="B" ShowNum="10" /}{Split/}
+<dt id="jump-C">C</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="C" ShowNum="10" /}
+<dt id="jump-D">D</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="D" ShowNum="10" /}
+<dt id="jump-E">E</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="E" ShowNum="10" /}
+<dt id="jump-F">F</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="F" ShowNum="10" /}{Split/}
+<dt id="jump-G">G</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="G" ShowNum="10" /}
+<dt id="jump-H">H</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="H" ShowNum="10" /}
+<dt id="jump-I">I</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="I" ShowNum="10" /}{Split/}
+<dt id="jump-J">J</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="J" ShowNum="10" /}
+<dt id="jump-K">K</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="K" ShowNum="10" /}{Split/}
+<dt id="jump-L">L</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="L" ShowNum="10" /}
+<dt id="jump-M">M</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="M" ShowNum="10" /}
+<dt id="jump-N">N</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="N" ShowNum="10" /}
+<dt id="jump-O">O</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="O" ShowNum="10" /}{Split/}
+<dt id="jump-P">P</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="P" ShowNum="10" /}
+<dt id="jump-Q">Q</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="Q" ShowNum="10" /}
+<dt id="jump-R">R</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="R" ShowNum="10" /}{Split/}
+<dt id="jump-S">S</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="S" ShowNum="10" /}
+<dt id="jump-T">T</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="T" ShowNum="10" /}
+<dt id="jump-U">U</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="U" ShowNum="10" /}{Split/}
+<dt id="jump-V">V</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="V" ShowNum="10" /}
+<dt id="jump-W">W</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="W" ShowNum="10" /}{Split/}
+<dt id="jump-X">X</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="X" ShowNum="10" /}
+<dt id="jump-Y">Y</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="Y" ShowNum="10" /}
+<dt id="jump-Z">Z</dt>{ZL.Label id="精确搜索按拼音排序字母查询出狗狗类型" Diccate="5" Zm="Z" ShowNum="10" /}{Split/}
+</dl>
+</div>
+</div>
+</div>
+</div>
+
+<select class="form-control banner_acnl" id="Select02">
+	<option selected>爱宠年龄</option>
+	<option>成犬</option>
+	<option>幼犬</option>
+</select>
+<select class="form-control banner_wtlx" id="Select03">
+	<option selected>问题类型</option>
+	<option>宠物饲养</option>
+	<option>宠物美容</option>
+	<option>宠物繁育</option>
+	<option>宠物训练</option>
+	<option>宠物疾病</option>
+</select>
+<button class="btn btn_bannerSearch" type="submit"><i class="zi zi_search"></i></button>
+</form>	
+</div>
+<a class="banner_wxst" href="{ZL:GetNodeLinkUrl(24)/}"><i class="zi zi_handRight"></i></i>微信收听更精彩-高级玩法点这里</a>
+</div>	
+</section>
+</header>
+<!--banner end-->	
+	
+<section class="home_cyzx">
+<div class="container">
+	<span class="cyzx_bar"></span>
+	<h2>宠医在线 有问必答</h2><small><a href="/user/Content/AddContent?NodeID=24&ModelID=51">立即提问-&gt;</a></small>
+	<div class="solu">
+		<div class="solu-body">
+			<div class="solu-left-right">
+				<div class="solu-left pull-left"><a href="javascript:;"><img src="{$CssDir/}Images/solu-arrow-left.png"></a></div>
+				<div class="solu-right pull-right"><a href="javascript:;"><img src="{$CssDir/}Images/solu-arrow-right.png"></a></div>
+			</div>
+			<div class="solu-body-child">
+				<div class="solu-floor"></div>
+				<div class="solu-item-box" style="margin-left: 0px; left: 0px;">
+					{ZL.Label id="专家首页_文章缩略图_带标题简介" NodeID="13" TitleNum="30" ShowNum="10" synNum="100" /}
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="cyzx_link"><a href="{ZL:GetNodeLinkUrl(13)/}">我是宠医，关爱宠物 [我要加入]</a></div>
+</div>
+</section>	
+<!--cyzx end-->	
+	
+<section class="home_baike">
+	<div class="container">
+	<div class="baike_title">
+	<div class="title_right">{ZL.Label id="根据节点ID输出指定节点名与链接" NodeID="7" /}丨{ZL.Label id="根据节点ID输出指定节点名与链接" NodeID="9" /}丨{ZL.Label id="根据节点ID输出指定节点名与链接" NodeID="10" /}丨{ZL.Label id="根据节点ID输出指定节点名与链接" NodeID="8" /}</div>
+	<div class="title_left"><img src="{$CssDir/}Images/common.png" alt=""><span>知识专区</span><a href="{ZL:GetNodeLinkUrl(25)/}">免费领药</a></div>
+	</div>
+	<div class="row">
+	<div class="col-md-3">
+		<div id="carouselExampleControls" class="carousel slide baike_lunbo" data-ride="carousel">
+		  <div class="carousel-inner">
+		{ZL.Label id="知识专区轮播_文章缩略图_带标题简介" NodeID="7" TitleNum="30" ShowNum="6" synNum="150" /}
+		  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
+		  </a>
+		  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
+		  </a>
+		</div>
+		</div>
+	<div class="clearfix"></div>
+	</div>
+	<div class="col-md-6 baike_content row">
+		{ZL.Label id="知识列表文章缩略图_带标题无简介" NodeID="8" TitleNum="30" ShowNum="8" synNum="100" /}
+	</div>
+	<div class="col-md-3">
+	<ul class="info_list">
+		{ZL.Label id="知识列表_带标题无简介无图" NodeID="10" TitleNum="30" ShowNum="10" synNum="100" /}
+	</ul>
+	</div>
+</div>
+</div>
+</section>
+<!--baike end-->
+
+<section class="home_kinds">
+<div class="container">
+	<div class="kinds_title">
+		<span>热门犬种</span>
+	</div>
+	<div class="row baike_kinds">
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=德牧" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_myq.jpg" alt="">
+			<span>德牧</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=泰迪" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_td.jpg" alt="">
+			<span>泰迪</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=约克夏" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_ykx.jpg" alt="">
+			<span>约克夏</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=金毛" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_jm.jpg" alt="">
+			<span>金毛寻回犬</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_bx.jpg" alt="">
+			<span>比熊</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_xnr.jpg" alt="">
+			<span>雪纳瑞</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=柴犬" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_cq.jpg" alt="">
+			<span>柴犬</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=柯基" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_kj.jpg" alt="">
+			<span>柯基</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=萨摩耶" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_smy.jpg" alt="">
+			<span>萨摩耶</span>
+			</a>
+		</div>
+				<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=阿拉斯加" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_alsj.jpg" alt="">
+			<span>阿拉斯加</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="/Class_24/NodePage.aspx?qz=哈士奇" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_hsq.png" alt="">
+			<span>哈士奇</span>
+			</a>
+		</div>
+		<div class="col-6 col-md-2">
+			<a href="" class="kinds_link">
+			<img src="{$CssDir/}Images/kinds_za.jpg" alt="">
+			<span>藏獒</span>
+			</a>
+		</div>
+	</div>
+	<div class="kinds_more"><a href="{ZL:GetNodeLinkUrl(24)/}">更多+</a></div>
+</div>
+</section>
+<!--kinds end-->
+		
+<section class="container home_help">
+	<div class="row home_help_list">
+	<div class="col-md-4">
+		<div class="card hlep_xsbd">
+		  <div class="card-header">新手必读</div>
+		  <div class="card-body">
+			 <ul>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何成为会员？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何发布宠物类问题？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何通过点币快速成长？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+			</ul>
+		  </div>
+		  <div class="card-footer">
+			<a href="{ZL:GetNodeLinkUrl(12)/}">了解更多</a>
+		  </div>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="card hlep_sqcy">
+		  <div class="card-header">申请宠医</div>
+		  <div class="card-body">
+			 <ul>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何成为会员？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何发布宠物类问题？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何通过点币快速成长？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+			</ul>
+		  </div>
+		  <div class="card-footer">
+			<a href="{ZL:GetNodeLinkUrl(12)/}">了解更多</a>
+		  </div>
+		</div>
+	</div>	
+	<div class="col-md-4">
+		<div class="card hlep_sjhz">
+		  <div class="card-header">商家合作</div>
+		  <div class="card-body">
+			 <ul>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何成为会员？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何发布宠物类问题？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+				<li>
+				<a href="{ZL:GetNodeLinkUrl(12)/}">如何通过点币快速成长？</a>
+				<p>通过手机、微信、APP即可快速成为知宠网用户，不收取任何费用，畅享专业百科平台。</p>
+				</li>
+			</ul>
+		  </div>
+		  <div class="card-footer">
+			<a href="{ZL:GetNodeLinkUrl(12)/}">了解更多</a>
+		  </div>
+		</div>
+	</div>	
+	
+	</div>
+		
+</section>
+<!--help end-->
+<footer class="home_footer">
+<div class="container">
+	<ul>
+      <a href="{ZL:GetInfoUrl(2)/}">关于平台</a>
+	 <a href="{ZL:GetInfoUrl(35)/}">法律声明</a>
+	 <a href="{ZL:GetInfoUrl(37)/}">知识产权</a>
+	 <a href="{ZL:GetInfoUrl(38)/}">免责声明</a>
+	 <a href="{ZL:GetInfoUrl(39)/}">隐私保护</a>
+	 <a href="{ZL:GetInfoUrl(36)/}">广告合作</a>
+	 <a href="{ZL:GetInfoUrl(40)/}">服务条款</a>
+      <a href="{ZL:GetInfoUrl(3)/}">联系我们</a>
+	</ul>
+	<p>{$Copyright/}</p>
+</div>
+</footer>
+<!--tooter end-->
+<nav class="fixed-bottom footBar">
+	<div class="container">
+	<div class="row">
+	<div class="col-md-6 footBar_wytw">
+	<span>最新网友提问</span>
+	<div class="home_Swiper">
+	<div class="swiper-container">
+	<div class="swiper-wrapper">
+{ZL.Label id="输出问答中心问题_标题时间" NodeID="24" TitleNum="30" ShowNum="10" /}
+	</div>
+	 </div>	
+	</div>	
+</div>
+	<div class="col-md-6 footBar_yszc">		
+	<div class="btn-group dropup show">
+      <button type="button" class="btn btn-outline-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> 配方领取 </button>
+      <div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -165px, 0px); top: 0px; left: 0px; will-change: transform;">
+	  <a class="dropdown-item" href="{ZL:GetShopUrl(1)/}">细小配方</a>
+	  <a class="dropdown-item" href="{ZL:GetShopUrl(2)/}">肠胃配方</a> </div>
+    </div>
+	<a href="{ZL:GetNodeLinkUrl(13)/}">医生注册&gt;</a>
+	<a href="/user/Content/AddContent?NodeID=24&ModelID=51">快速提问&gt;</a></div>
+	</div>
+	</div>
+</nav>	
+<!--wytw end-->
+
+<div class="home_kefu">
+<ul>
+<li>
+<a href="javascript:;"><i class="zi zi_phonevolume" ></i></a>
+<div class=" home_kefu_item" style="bottom:13rem;">
+<div class="home_kefu_cb">
+<a href="tel:400-111-9999 ">
+<span> 拨打电话</span>
+</a>
+</div>
+</div>
+</li>
+<li>
+<a href="javascript:;"><i class="zi zi_tmQq"></i></a>
+<div class=" home_kefu_item" style="bottom:13rem;">
+<div class="home_kefu_cb">
+<a href="">
+<span> 联系QQ</span>
+</a>
+</div>
+</div>
+</li>
+<li>
+<a href="javascript:;"><i class="zi zi_bubbleSquare" ></i></a>
+<div class=" home_kefu_item" style="bottom:13rem;">
+<div class="home_kefu_cb">
+<a href="/Guest">
+<span>留言咨询</span>
+</a>
+</div>
+</div>
+</li>
+<li>
+<a href="javascript:;"><i class="zi  zi_tmWeixin" ></i></a>
+<div class=" home_kefu_item" style="bottom:13rem;">
+<div class="home_kefu_cb">
+<a href="">
+<span>微信</span>
+</a>
+</div>
+</div>
+</li>
+<li>
+<a href="javascript:;"><i class="zi zi_qrcode"></i></a>
+<div class=" home_kefu_item home_kefu_items" style="bottom:13rem;">
+<div class="home_kefu_cb">
+<a href="javasrcipt:;">
+<img src="{$CssDir/}Images/QRcode.jpg" alt="微信二维码" width="155">
+</a>
+</div>
+</div>
+</li>
+</ul>
+</div>
+<!--kefu end-->
+
+
+{ZL.Label id="四叶草插件"/}
+{ZL.Label id="仿公众号底部"/}
+	
+<script src="dist/js/swiper.min.js"></script>	
+<script>
+$(".navbar01").addClass("active");
+
+$(".banner_xzqz").click(function(e){
+	$(this).addClass("active");
+	    $(document).one("click", function(){
+        $(".banner_xzqz").removeClass("active");
+    });
+    e.stopPropagation();
+});
+$(".banner_xzqz .list dd").click(function(e){
+	var ddqz = $(this).html();
+	$(".banner_xzqz .select_selected span").text(ddqz);
+	$(".banner_xzqz").removeClass("active");
+	e.stopPropagation();
+});
+$(".banner_xzqz .index li").click(function(){
+	$(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+    $(this).addClass('active');  // 添加当前元素的样式
+	var index = $(this).attr('data-target');
+	var container = $(".list");
+    scrollTo = $(index);
+    container.scrollTop(scrollTo.offset().top - container.offset().top +container.scrollTop());
+});
+
+
+//轮播active
+$(function(){
+	$(".carousel-inner .carousel-item:first-child").first().addClass('active');
+})
+$(function(){
+	$(".solu-item-warp:nth-child(3)").addClass('solu-item-active');
+})
+
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+
+
+
+
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>353</LabelID>
+    <LabelName>输出用户评论过的问题列表</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam>UID,0,1,用户ID|TitleNum,100,1,标题长度|ShowNum,10,1,调用信息数</LabelParam>
+    <LabelTable>ZL_CommonModel LEFT JOIN ZL_Comment ON ZL_CommonModel.GeneralID=ZL_Comment.GeneralID</LabelTable>
+    <LabelField>ZL_CommonModel.GeneralID,ZL_CommonModel.Title,ZL_Comment.UserID,CreateTime</LabelField>
+    <LabelWhere>UserID=@UID group by UserID,ZL_CommonModel.GeneralID,ZL_CommonModel.title,CreateTime
+</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime desc</LabelOrder>
+    <LabelContent>&lt;ul&gt;
+  {Repeate}
+  &lt;li&gt;&lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}"&gt;{ZL:CutText({Field="Title"/},@TitleNum,)/}&lt;/a&gt;&lt;/li&gt;
+  {/Repeate}
+
+&lt;/ul&gt;</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_CommonModel","tb_s":"ZL_Comment"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

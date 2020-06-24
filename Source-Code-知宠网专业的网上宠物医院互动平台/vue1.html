@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>vue学习</title>
+<link href="/dist/css/bootstrap4.min.css" rel="stylesheet"/>
+<script src="/JS/jquery.min.js" ></script>
+<script src="/dist/js/popper.min.js"></script>
+<script src="/dist/js/bootstrap4.min.js"></script>
+<script src="/dist/vue/vue.js"></script>
+</head>
+<body>
+<div class="container" id="lzys">
+<h1>vue学习</h1>
+<input v-model.lazy="msg" >
+<p>{{msg}}</p>
+<hr>
+</div>
+
+<div class="container" id="debounces">
+<input v-model="msb" debounce="5000">
+<p>{{msb}}</p>
+<hr>
+</div>
+
+<div class="container" id="vfor">
+<ul id="demo">
+<li v-for="(item,index) in items" class="{{index}}">
+<a class="{{index}}" href="#{{$index}}">
+{{index}} - {{parentMessage}} {{item.msg}}++{{index}}
+</a>
+</li>
+</ul>
+<hr>
+</div>
+
+<div class="container">
+<ul id="vfor2">
+<li v-for="(item,index) in items">
+{{parentMessage}}-{{index}}-{{item.message}}
+</li>
+</ul>
+<hr>
+</div>
+
+
+<script>
+var bbbbb = new Vue({
+el: '#lzys',
+data: {
+msg: '内容是在change事件后才改变的~'
+}
+})
+
+var dddd = new Vue({
+el: '#debounces',
+data:{
+msb:'内容是在5000s后才改变的~'
+}
+})
+
+var demo = new Vue({
+el: '#demo',
+data:{
+parentMessage:'滴滴',
+items:[
+{msg:'滴滴顺风车'},
+{msg:'滴滴专车'}
+]
+}
+})
+
+var vfor2s = new Vue({
+el:'#vfor2',
+data:{
+parentMessage:'parent',
+items:[
+{message:'Foo'},
+{message:'Bar'}
+]
+}
+})
+</script>
+
+</body>
+</html>

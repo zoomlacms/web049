@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>319</LabelID>
+    <LabelName>全站底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;footer class="home_footer"&gt;
+&lt;div class="container"&gt;
+	&lt;ul&gt;
+      &lt;a href="{ZL:GetInfoUrl(2)/}"&gt;关于平台&lt;/a&gt;
+	 &lt;a href="{ZL:GetInfoUrl(35)/}"&gt;法律声明&lt;/a&gt;
+	 &lt;a href="{ZL:GetInfoUrl(37)/}"&gt;知识产权&lt;/a&gt;
+	 &lt;a href="{ZL:GetInfoUrl(38)/}"&gt;免责声明&lt;/a&gt;
+	 &lt;a href="{ZL:GetInfoUrl(39)/}"&gt;隐私保护&lt;/a&gt;
+	 &lt;a href="{ZL:GetInfoUrl(36)/}"&gt;广告合作&lt;/a&gt;
+	 &lt;a href="{ZL:GetInfoUrl(40)/}"&gt;服务条款&lt;/a&gt;
+      &lt;a href="{ZL:GetInfoUrl(3)/}"&gt;联系我们&lt;/a&gt;
+	&lt;/ul&gt;
+	&lt;p&gt;{$Copyright/}&lt;/p&gt;
+&lt;/div&gt;
+&lt;/footer&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot>循环计算</addroot>
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

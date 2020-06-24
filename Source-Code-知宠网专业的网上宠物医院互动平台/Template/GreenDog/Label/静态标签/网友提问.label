@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>325</LabelID>
+    <LabelName>网友提问</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;nav class="fixed-bottom footBar"&gt;
+	&lt;div class="container"&gt;
+	&lt;div class="row"&gt;
+	&lt;div class="col-md-6 footBar_wytw"&gt;
+	&lt;span&gt;最新网友提问&lt;/span&gt;
+	&lt;div class="home_Swiper"&gt;
+	&lt;div class="swiper-container"&gt;
+	&lt;div class="swiper-wrapper"&gt;
+{ZL.Label id="输出问答中心问题_标题时间" NodeID="24" TitleNum="30" ShowNum="10" /}
+	&lt;/div&gt;
+	 &lt;/div&gt;	
+	&lt;/div&gt;	
+&lt;/div&gt;
+	&lt;div class="col-md-6 footBar_yszc"&gt;		
+	&lt;div class="btn-group dropup show"&gt;
+      &lt;button type="button" class="btn btn-outline-info btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"&gt; 配方领取 &lt;/button&gt;
+      &lt;div class="dropdown-menu" x-placement="top-start" style="position: absolute; transform: translate3d(0px, -165px, 0px); top: 0px; left: 0px; will-change: transform;"&gt;
+	  &lt;a class="dropdown-item" href="{ZL:GetShopUrl(1)/}"&gt;细小配方&lt;/a&gt;
+	  &lt;a class="dropdown-item" href="{ZL:GetShopUrl(2)/}"&gt;肠胃配方&lt;/a&gt; &lt;/div&gt;
+    &lt;/div&gt;
+	&lt;a href="{ZL:GetNodeLinkUrl(13)/}"&gt;医生注册&amp;gt;&lt;/a&gt;
+	&lt;a href="/user/Content/AddContent?NodeID=24&amp;ModelID=51"&gt;快速提问&amp;gt;&lt;/a&gt;&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/nav&gt;	
+&lt;!--wytw end--&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

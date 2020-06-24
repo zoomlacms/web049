@@ -1,0 +1,405 @@
+﻿{ZL.Source id="常规商品数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="常规商品数据源" FD="Proname" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="常规商品数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="常规商品数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot4()/}
+<link href="/dist/css/weui.min.css" rel="stylesheet" />
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script type="text/javascript" src="{$CssDir/}js/jquery.imagezoom.min.js"></script>
+<script type="text/javascript" src="{$CssDir/}js/server.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>
+<style type="text/css">
+::after, ::before { box-sizing:content-box;}
+.shop_top { position:relative;}
+#form .weui-cell__bd p { margin-bottom:0;}
+#home_nav { position: relative;}
+</style>
+</head>
+<body class="shop_yplq">
+<header class="shop_header">
+{ZL.Label id="全站头部"/}
+</header>
+
+<section class="bs-header shop_banner" >
+<div class="container">
+<span>{ZL.Label id="输出指定节点提示" NodeID="{SField sid="常规商品数据源" FD="NodeID" page="0"/}" /}</span>
+</div>
+<div class="shop_mask"></div>
+</section>
+<!--shop brand-->
+
+<div class="d-block d-sm-none phone_brand">
+<strong>{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="常规商品数据源" FD="NodeID" page="0"/}" /}</strong>
+<span>{ZL.Label id="获取节点说明" NodeID="{SField sid="常规商品数据源" FD="NodeID" page="0"/}" /}</span>
+<div class="bottom_mask">
+<div class="bottom_mask_t bottom_mask_top"><div class="mask_t_i mask_t_bg1"></div></div>
+<div class="bottom_mask_t bottom_mask_middle"><div class="mask_t_i mask_t_bg2"></div></div>
+<div class="bottom_mask_t bottom_mask_bottom"><div class="mask_t_i mask_t_bg3"></div></div>
+</div>
+</div>
+<!--phone end-->
+
+
+
+
+<div class="shopcon_banner">
+<div class="container">
+<h3> <a href="{ZL:GetNodeLinkUrl({SField sid="常规商品数据源" FD="NodeID" page="0"/})/}"><i class="fa fa-mail-reply"></i> {ZL.Label id="输出指定ID节点名" NodeID="{SField sid="常规商品数据源" FD="NodeID" page="0"/}" /} </a></h3>
+</div>
+</div>
+<div class="container margintop10 shop_content">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 shop_content_left">
+<div class="list-group">
+<a href="{ZL:GetNodeLinkUrl(1)/}" class="list-group-item d-flex justify-content-between align-items-center list-group-item-success">
+你可能感兴趣的<span class="badge badge badge-light badge-pill">更多</span></a>
+<a href="{ZL:GetNodeLinkUrl(1)/}" class="list-group-item text-secondary">最新资讯</a>
+<a href="{ZL:GetNodeLinkUrl(2)/}" class="list-group-item text-secondary">知识专区</a>
+<a href="{ZL:GetNodeLinkUrl(13)/}" class="list-group-item text-secondary">专家咨询</a>
+<a href="{ZL:GetNodeLinkUrl(24)/}" class="list-group-item text-secondary">问答中心</a>
+<a href="{ZL:GetInfoUrl(2)/}" class="list-group-item text-secondary">关于平台</a>
+<a href="{ZL:GetInfoUrl(3)/}" class="list-group-item text-secondary">联系我们</a>
+</div>
+</div>
+<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+<div class="row">
+<div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+<div class="box">
+<div class="tb-booth tb-pic tb-s310">
+<a href='{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}'><img src='{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}' alt='{SField sid="常规商品数据源" FD="Proname" page="0"/}' rel='{ZL:GetPicUrl({SField sid="常规商品数据源" FD="Thumbnails" page="0"/})/}' class="jqzoom" alt="{SField sid="常规商品数据源" FD="Proname" page="0"/}" /></a>
+</div>
+</div>
+</div>
+<div  class="col-lg-7 col-md-7 col-sm-7 col-xs-12">
+<h2>{SField sid="常规商品数据源" FD="Proname" page="0"/}</h2>
+<form id="form" name="form" method="post" action="/Cart/Cart.aspx" style="margin-bottom:10px;">
+<input name="id" type="hidden" id="id" value="{SField sid="常规商品数据源" FD="ID" page="0"/}" />
+<div class="weui-cells">
+<div class="weui-cell">
+<div class="weui-cell__bd"><p>编号</p></div>
+<div class="weui-cell__ft">{SField sid="常规商品数据源" FD="ProCode" page="0"/}</div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__bd"><p>配方类别</p></div>
+<div class="weui-cell__ft">{SField sid="常规商品数据源" FD="brand" page="0"/}</div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__bd"><p>邮包及服务费</p></div>
+<div class="weui-cell__ft"><span style="font-size:1.5em; font-weight:bold; color:#f40;"><i class="zi zi_yensign"></i> {ZL:GetMoney({SField sid="常规商品数据源" FD="LinPrice" page="0"/},2,1)/}元</span></div>
+</div>
+<div class="weui-cell">
+<div class="weui-cell__bd"><p>领取数量</p></div>
+<div class="weui-cell__ft">
+<div class="input-group input-group-sm" style="max-width:150px;">
+<span class="input-group-btn"><button class="btn btn-info" type="button" onClick="Product.minus();"><i class="zi zi_minus"></i></button></span>
+<input type="text" class="form-control text-center" name="Pronum" id="Pronum" value="1"  maxlength="8"/>
+<span class="input-group-btn"><button class="btn btn-info" type="button" onClick="Product.plus();"><i class="zi zi_plus"></i></button></span>
+</div>
+</div>
+</div>
+</div>
+<input name="Attribute" id="Attribute"  type="hidden" value="">
+<input name="color" value="" id="color" type="hidden" />
+<input name="size" value="" id="size" type="hidden" />
+<button type="button" onClick="Product.submitToCart();" class="btn btn-info btn_submit"><i class="fa fa-shopping-cart"></i> 确认提交</button>
+</form>
+</div>
+</div>
+<!--内容主体开始 -->
+<ul class="nav nav-tabs" style="margin-top:1em;">
+<li class="active"><a href="#home" data-toggle="tab">商品详细</a></li>
+</ul>
+<!-- Tab panes -->
+<div class="tab-content">
+<div class="tab-pane active" id="home">{SField sid="常规商品数据源" FD="Procontent" page="0"/} </div>
+</div>
+<!--右 --> 
+<div class="iframe_comm" id="iframe_comm" hidden>
+<iframe id="comm_ifr" scrolling="no" onload="IfrAutoHeight();" src='/User/Order/ShareList?ProID={SField sid="常规商品数据源" FD="ID" page="0"/}' style="width:100%;" align="middle" frameborder="0"></iframe>
+<script>
+	function commentAnchor() { $("html,body").animate({ scrollTop: $("#iframe_comm").offset().top - 100 }, 300); }
+	function IfrAutoHeight() { var $ifr = $("#comm_ifr"); $ifr.height($ifr.contents().height()); }
+</script>
+</div>
+
+</div>
+</div>
+</div>
+<!--内容主体结束 -->
+
+
+
+<div id="exampleModalLive" class="modal fade show" tabindex="-1" role="dialog" aria-labelledby="exampleModalLiveLabel" style="display: block; padding-right: 17px;" aria-hidden="true" hidden>
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+	  <form name="form8" method="post" action="/PubAction.aspx">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLiveLabel">购买信息</h5>
+        </div>
+        <div class="modal-body" style="overflow: auto;height: 500px;">
+			<input type="hidden" name="PubID" id="PubID" value="8" />
+			<input type="hidden" name="PubContentid" id="PubContentid" value="{PubContentid/}" />
+			<input type="hidden" name="PubInputer" id="PubInputer" value="{PubInputer/}" />
+			<div class="form-group" hidden>
+			<label for="PubTitle">评论标题：</label>
+			<input type="text" class="form-control" id="PubTitle" name="PubTitle" value="{SField sid="常规商品数据源" FD="Proname" page="0"/}"/>
+			</div>
+			
+			<div class="form-group buy_info_input">
+			<label for="PubContent">买家姓名：</label>
+			<input type="text" class="form-control" id="mjxm" name="mjxm" />
+			</div>
+			
+						
+			<div class="form-group buy_info_input">
+			<label for="PubContent">狗狗品种：</label>
+			<input type="text" class="form-control" id="ggpz" name="ggpz" />
+			</div>
+			
+			<div class="form-group buy_info_input">
+			<label for="PubContent">狗狗年龄：</label>
+			<input type="text" class="form-control" id="ggnl" name="ggnl" />
+			</div>
+			
+			<div class="form-group buy_info_input">
+			<label for="PubContent">狗狗体重：</label>
+			<input type="text" class="form-control" id="ggtz" name="ggtz" />
+			</div>
+			
+			
+			<div class="form-group buy_info_text">
+			<label for="PubContent">买家地址：</label>
+			<textarea class="form-control" name="mjdz" cols="50" rows="10" id="mjdz"></textarea>
+			</div>
+
+			
+			<div class="form-group" hidden>
+			<label for="PubContent">评论内容：</label>
+			<input type="text" class="form-control" id="PubContent" name="PubContent" value="{ZL:GetuserName()/}的{SField sid="常规商品数据源" FD="Proname" page="0"/}"/>
+			</div>
+			<div class="form-group text-center" hidden>
+			<button type="submit" class="btn btn-default">提交</button>
+			<button type="reset" class="btn btn-default">重置</button>
+			</div>
+			
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-info" data-dismiss="modal">提交</button>
+        </div>
+      </form>
+	  </div>
+    </div>
+</div>
+
+<!--弹窗组件-->
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+{ZL.Label id="全站底部"/}
+{ZL.Label id="侧边客服"/}
+{ZL.Label id="网友提问"/}
+{ZL.Label id="仿公众号底部"/}
+{ZL.Label id="四叶草插件"/}	
+</body>
+</html>
+<script src="/JS/Modal/APIResult.js"></script>
+<script src="{$CssDir/}js/Product.js"></script>
+<script>
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$("#home_nav").css("position","fixed").addClass("active")
+	}
+	else{
+		$("#home_nav").css("position","relative").removeClass("active");
+	}
+});
+
+$("#exampleModalLive .modal-dialog .modal-footer button").click(function(){
+	$("#exampleModalLive").css("display","none");
+});
+/*显示搜索框*/
+function isSearch(){
+    $(".home_search").css("opacity","1").css("z-index","1").css("right","0").css("top","0.5rem");
+    $(".home_top_nav").fadeOut(200);
+    $(".home_search .form-control").focus();
+}
+/*关闭搜索框*/
+function isClose(){
+    $(".home_search").css("opacity","0").css("z-index","-1").css("right","-1em");
+    $(".home_top_nav").fadeIn(1000);
+}
+$(".shop_top .navbar-nav>li.dropdown").mouseover(function(){
+    $(this).addClass("open");
+}).mouseout(function(){
+    $(this).removeClass("open");
+});
+/*显示搜索框*/
+function iSearch(){
+    if($(".home_search").is(":hidden")){
+        $(".home_search").fadeIn(250);
+    }else{
+        $(".home_search").fadeOut(250);
+    }
+};
+//===========================================================
+/*动态输出商品组合详细信息*/
+var para = {
+key:'',
+alias:'product',
+psize:'1000',
+cpage:1,
+cate:1,
+proid:'"id":"{SField sid="常规商品数据源" FD="ID" page="0"/}"'
+}
+$.post("/API/Center.ashx?action=GetCustom",para,function(data){
+	data=JSON.parse(data);
+	if(data.result!="[]"){
+		data=JSON.parse(data.result);
+		for(var i=0;i<data.length;i++){
+			var prohtml='';
+			proStr=data[i].procontent;
+			proID=data[i].id;
+			proPrice=data[i].shiprice;
+			proName=data[i].proname;
+			proStr=JSON.parse(proStr);
+			$.each(proStr,function(i,proStr){
+				prohtml+='<div class="pro_tui_m" data-id='+proStr.id+'><a href="/Shop/'+proStr.id+'.aspx"><img src="/UploadFiles/nopic.gif" alt="'+proStr.name+'" value="'+proStr.name+'" /></a><h4><a href="/Shop/'+proStr.id+'.aspx">'+proStr.name+'</a></h4><p>单价：<span>'+proPrice.toFixed(2)+'</span></p><i class="fa fa-plus"></i></div>';
+			});
+			$(".pro_group .nav-tabs li:nth-child("+(i+1)+") a").html(proName);
+			if(i>=1){
+				var str='<li role="presentation"><a href="#t'+(i+1)+'" aria-controls="t'+(i+1)+'" role="tab" data-toggle="tab">'+proName+'</a></li>';
+				var str1='<div role="tabpanel" class="tab-pane" id="t'+(i+1)+'"><div class="pro_tui_ms"></div></div>'
+				$(".pro_group ul").append(str);
+				$(".pro_group .tab-content").append(str1);
+			}
+			var a1='<div class="pro_tui_je"><i>=</i><p>组合价:<span>'+proPrice.toFixed(2)+'</span><a href="/Cart/Cart.aspx?ID='+proID+'&Pronum=1">立即购买</a></p></div>';
+			$(".pro_group .tab-content .tab-pane:nth-child("+(i+1)+") .pro_tui_ms").append('<div class="pro_tui_k">'+prohtml+'<div class="clearfix"></div></div>');
+			$(".pro_group .tab-content .tab-pane:nth-child("+(i+1)+")").append(a1+'<div class="clearfix"></div>');
+		}
+        /*设置每个商品的缩略图*/
+		$(".pro_tui_m").each(function(index, element) {
+			var id=$(this).data(id);
+			var para = {
+			key:'',
+			alias:'propic',
+			psize:'1000',
+			cpage:1,
+			cate:1,
+			proid:id.id
+			}
+			$.post("/API/Center.ashx?action=GetCustom",para,function(data){
+				proPic='';
+				data=JSON.parse(data);
+				if(data.result!=""){
+					data=JSON.parse(data.result);
+                    if(data[0].thumbnails!=null){
+                        if(data[0].thumbnails.indexOf("UploadFile")) proPic="/UploadFile/"+data[0].thumbnails;
+					    else proPic="/"+data[0].thumbnails;
+                    }else{
+                        proPic="/UploadFiles/nopic.gif";
+                    }
+					$(".pro_tui_m[data-id='"+id.id+"']").find("img").attr("src",proPic);
+					$(".pro_group .pro_tui_m[data-id='"+id.id+"'] p span").html(data[0].shiprice.toFixed(2));
+				}
+			});
+		});
+	}else if(data.result=="[]"){
+        $(".pro_group").hide();   
+    }
+    //读取商品个数及设置外层div长度，用于overflow
+    $(".pro_group .tab-content .tab-pane .pro_tui_ms .pro_tui_k").each(function(index, element) {
+        var h = ($(this).children(".pro_tui_m").length)*13+"em";
+        $(this).css("width",h);
+    });
+});
+
+//会员ajax登录状态需要结合JS/Controls/B_User.js引用同步生效
+var buser = new B_User();
+buser.IsLogged(function(data,flag){
+	if(flag)
+	{
+		data=JSON.parse(data);
+		$(".nav_user>a").html(data.UserName);
+		$(".nav_user .dropdown-menu li:nth-child(1) a").html("会员中心");
+		$(".nav_user .dropdown-menu li:nth-child(2)").remove();
+        $("#iframe_comm").show();
+	}
+});
+function LogoutFun()
+{
+	buser.Logout(function(){location=location;});
+};
+//商品图片切换 
+$(document).ready(function(){
+	$(".jqzoom").imagezoom();
+	$("#thumblist li a").click(function(){
+		$(this).parents("li").addClass("tb-selected").siblings().removeClass("tb-selected");
+		$(".jqzoom").attr('src',$(this).find("img").attr("mid"));
+		$(".jqzoom").attr('rel',$(this).find("img").attr("big"));
+	});
+});
+</script>
+<script>
+    Product.proid={SField sid="常规商品数据源" FD="ID" page="0"/};
+    Product.init();
+</script>

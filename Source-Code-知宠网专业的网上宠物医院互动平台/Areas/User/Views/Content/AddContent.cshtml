@@ -1,0 +1,375 @@
+﻿@using System.Data;
+@using ZoomLa.SQLDAL
+@using ZoomLa.BLL
+@using ZoomLaCMS.Models.Field
+@model ZoomLa.Model.M_CommonData
+@{
+    DataTable ds = (DataTable)ViewBag.ds;
+    string action = MVCHelper.GetAction(Url.Action("Content_Add", "Content"), Request);
+}
+@section head{
+<title id="addcon_title">宠医注册</title>
+<script charset="utf-8" src="/Plugins/Ueditor/ueditor.config.js"></script>
+<script charset="utf-8" src="/Plugins/Ueditor/ueditor.all.min.js"></script>
+}
+@section content{
+<link href="/Template/GreenDog/style/global.css?Version=20180312" rel="stylesheet"/>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>    
+<style>.user_navbar_top{display: none;}.home_banner{min-height: auto;padding-top: 0;background: white;padding-bottom: 0;}</style>
+<header>
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"全站头部\"/}"))
+<section class="bs-header question_Title">
+<div class="container question_Con">
+<strong>发表问题</strong>
+<div class="question_Con_btn"><a href="/"  class="btn btn-info btn-sm">返回首页</a>	<a href="@MvcHtmlString.Create(Call.GetLabel("{ZL:GetNodeLinkUrl(1)/}"))" class="btn btn-secondary btn-sm">最新资讯</a> <a href="@MvcHtmlString.Create(Call.GetLabel("{ZL:GetNodeLinkUrl(24)/}"))" class="btn btn-success btn-sm">了解更多</a></div>
+</div>
+</section>
+</header>
+<!--header end-->
+
+
+<div class="d-block d-sm-none phone_brand">
+<strong><i class="zi zi_love"></i>  知宠网</strong>
+<span><i class="zi zi_plus"></i>  我是宠医，关爱宠物，加入公益解答团队！</span>
+<div class="bottom_mask">
+<div class="bottom_mask_t bottom_mask_top"><div class="mask_t_i mask_t_bg1"></div></div>
+<div class="bottom_mask_t bottom_mask_middle"><div class="mask_t_i mask_t_bg2"></div></div>
+<div class="bottom_mask_t bottom_mask_bottom"><div class="mask_t_i mask_t_bg3"></div></div>
+</div>
+</div>
+
+
+<div class="container add_question">
+<nav aria-label="breadcrumb" role="navigation">
+<ol class="breadcrumb">
+	<li class="breadcrumb-item"><a title="会员中心" href="@Url.Action("Default","")">会员中心</a></li>
+    <li class="breadcrumb-item"><a title="发布问题" href="/user/Content/AddContent?NodeID=24&ModelID=51">发布问题</a></li>
+</ol>
+</nav>
+</div>
+
+
+
+
+
+
+
+
+<form action="@action" method="post">
+<div class="container btn_green addcontent add_question_con">
+<ul class="nav nav-tabs add_question_tabs">
+    <li class="nav-item active"><a class="nav-link active" href="#Tabs0" data-toggle="tab">内容信息</a></li>
+    <li class="nav-item" hidden><a class="nav-link" href="#Tabs1" data-toggle="tab">补充信息</a></li>
+</ul>
+<div class="tab-content panel-body padding0">
+<div id="Tabs0" class="tab-pane active manage_content">
+<ul class="fd_body add_con_ul">
+	<li class="fd_item quanho con_quanzhonglist" style="display: none;">
+		<div class="fd_item_head">
+		<div class="fd_alias">犬种</div>
+		<a href="javascript:;" class="pull-right opened" style="margin-right:10px;" onclick="field.toggle(this);">
+			<i class="zi zi_circleRights" style="font-size:18px;" title="收缩"></i>
+			<i class="zi zi_circleDowns" style="font-size:18px;" title="展开"></i>
+		</a>
+		</div>
+		<div class="fd_item_field">
+		   <div class="home_banner">
+			<div class="custom-select banner_xzqz" id="Select01">
+			<div class="select_selected" data-select-picker><span>选择犬种</span><i class="zi zi_pathDown" ></i></div>
+			<div class="select_option" data-select-dropdown>
+			<div class="option-wrapper">
+			<div class="brand" data-select-brand>
+			<ol class="index"><li data-target="#jump-rm" class="active">热</li><li data-target="#jump-A" class="">A</li><li data-target="#jump-B" class="">B</li><li data-target="#jump-C" class="">C</li><li data-target="#jump-D" class="">D</li><li data-target="#jump-F" class="">F</li><li data-target="#jump-G" class="">G</li><li data-target="#jump-H" class="">H</li><li data-target="#jump-I" class="">I</li><li data-target="#jump-J">J</li><li data-target="#jump-K">K</li><li data-target="#jump-L">L</li><li data-target="#jump-M">M</li><li data-target="#jump-N">N</li><li data-target="#jump-O">O</li><li data-target="#jump-P">P</li><li data-target="#jump-Q">Q</li><li data-target="#jump-R">R</li><li data-target="#jump-S">S</li><li data-target="#jump-T">T</li><li data-target="#jump-W">W</li><li data-target="#jump-X">X</li><li data-target="#jump-Y">Y</li><li data-target="#jump-Z">Z</li></ol>
+			<dl class="list quanzhong_list_link">
+			<dt id="jump-rm">热门</dt>
+			<dd data-text="边境牧羊犬" data-target="brand">边境牧羊犬</dd>
+			<dd data-text="泰迪" data-target="brand">泰迪</dd>
+			<dd data-text="约克夏" data-target="brand">约克夏</dd>
+			<dd data-text="金毛" data-target="brand">金毛</dd>
+			<dd data-text="比熊" data-target="brand">比熊</dd>
+			<dd data-text="雪纳瑞" data-target="brand">雪纳瑞</dd>
+			<dd data-text="柴犬" data-target="brand">柴犬</dd>
+			<dd data-text="柯基" data-target="brand">柯基</dd>
+			<dd data-text="萨摩耶" data-target="brand">边境牧羊犬</dd>
+			<dd data-text="阿拉斯加" data-target="brand">泰迪</dd>
+			<dd data-text="哈士奇" data-target="brand">约克夏</dd>
+			<dd data-text="藏獒" data-target="brand">金毛</dd>
+			<dd data-text="贵宾犬" data-target="brand">比熊</dd>
+			<dd data-text="松狮" data-target="brand">雪纳瑞</dd>
+			<dd data-text="吉娃娃" data-target="brand">柴犬</dd>
+			<dd data-text="喜乐蒂牧羊犬" data-target="brand">柯基</dd>
+			<dd data-text="苏格兰牧羊犬" data-target="brand">边境牧羊犬</dd>
+			<dd data-text="拉布拉多" data-target="brand">泰迪</dd>
+			<dd data-text="德牧" data-target="brand">约克夏</dd>
+			<dd data-text="博美犬" data-target="brand">金毛</dd>
+			<dd data-text="大白熊犬" data-target="brand">比熊</dd>
+			<dd data-text="法国斗牛犬" data-target="brand">雪纳瑞</dd>
+			<dd data-text="英国斗牛犬" data-target="brand">柴犬</dd>
+			<dd data-text="阿富汗" data-target="brand">柯基</dd>
+			<dd data-text="西高地白梗" data-target="brand">边境牧羊犬</dd>
+			<dd data-text="小鹿犬" data-target="brand">泰迪</dd>
+			<dd data-text="巴哥犬" data-target="brand">约克夏</dd>
+			<dd data-text="西施犬" data-target="brand">金毛</dd>
+			<dd data-text="腊肠犬" data-target="brand">比熊</dd>
+			<dd data-text="比格犬" data-target="brand">雪纳瑞</dd>
+			<dt id="jump-A">A</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"A\" ShowNum=\"10\" /}"))
+			<dt id="jump-B">B</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"B\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-C">C</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"C\" ShowNum=\"10\" /}"))
+			<dt id="jump-D">D</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"D\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-E">E</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"E\" ShowNum=\"10\" /}"))
+			<dt id="jump-F">F</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"F\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-G">G</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"G\" ShowNum=\"10\" /}"))
+			<dt id="jump-H">H</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"H\" ShowNum=\"10\" /}"))
+			<dt id="jump-I">I</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"I\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-J">J</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"J\" ShowNum=\"10\" /}"))
+			<dt id="jump-K">K</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"K\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-L">L</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"L\" ShowNum=\"10\" /}"))
+			<dt id="jump-M">M</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"M\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-N">N</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"N\" ShowNum=\"10\" /}"))
+			<dt id="jump-O">O</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"O\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-P">P</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"P\" ShowNum=\"10\" /}"))
+			<dt id="jump-Q">Q</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"Q\" ShowNum=\"10\" /}"))
+			<dt id="jump-R">R</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"R\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-S">S</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"S\" ShowNum=\"10\" /}"))
+			<dt id="jump-T">T</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"T\" ShowNum=\"10\" /}"))
+			<dt id="jump-U">U</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"U\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-V">V</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"V\" ShowNum=\"10\" /}"))
+			<dt id="jump-W">W</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"W\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-X">X</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"X\" ShowNum=\"10\" /}"))
+			<dt id="jump-Y">Y</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"Y\" ShowNum=\"10\" /}")){Split/}
+			<dt id="jump-Z">Z</dt>@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"精确搜索按拼音排序字母查询出狗狗类型\" Diccate=\"5\" Zm=\"Z\" ShowNum=\"10\" /}")){Split/}
+			</dl>
+			</div>
+			</div>
+			</div>
+			</div>
+			</div>
+		</div>
+	</li>
+	<!--犬种 end-->
+	
+
+    <li class="fd_item add_con_li" style="display: none;">
+	<div class="fd_item_head"><div class="fd_alias">@B_Content.GetFieldAlias("Title", ds)</div><span class="fd_item_req">*</span></div>
+	<div class="fd_item_field input-group">
+	    <input type="text" id="txtTitle" name="Title" value="@Model.Title" class="form-control m50rem_50 required content_title"  onkeyup="isgoEmpty('txtTitle', 'span_txtTitle'); Getpy('txtTitle', 'PYtitle')" />
+	    @*@Html.TextBoxFor(Model => Model.Title, new { @style = "", @class = "form-control m50rem_50 content_title", onkeyup = "isgoEmpty('Title','span_txtTitle');Getpy('Title','PYtitle')" })*@
+		<span class="input-group-append" ><span id="span_txtTitle" class="input-group-text" name="span_txtTitle" hidden>字数：0</span></span>
+		<div class="input-group-append">
+		<a href="javascript:;" class="btn btn-info btn-sm" onclick="ShowTitle()" hidden><i class="zi zi-info"></i>标题属性</a>
+	    <button type="button" class="btn btn-info btn-sm" onclick="ShowSys();"><i class="zi zi_menu"></i></button>
+	    </div>
+	</div>
+	<input type="hidden" id="ThreadStyle" name="TitleStyle" value="@Model.TitleStyle" />
+    </li>
+	
+    @Html.Partial("Fields/Index_User_AddContent", new VM_FieldModel(Model.ModelID, Model.NodeID, new ModelConfig() { Source = ModelConfig.SType.UserContent }, Model.GeneralID))
+    <li class="fd_item add_question_kz">
+	<div class="fd_item_head">主编辑器扩展图:</div>
+	<div class="fd_item_field">
+	    <ul id="ThumImg_ul" class="preview_img_ul">
+		<div class="clearfix"></div>
+	    </ul>
+	    <input type="hidden" id="ThumImg_Hid" name="ThumImg_Hid" value="@Model.TopImg" />
+	</div>
+    </li>
+</ul>
+</div>
+<div id="Tabs1" class="tab-pane">
+<ul class="fd_body">
+    <li class="fd_item">
+	<div class="fd_item_head"><div class="fd_alias">@B_Content.GetFieldAlias("PYtitle", ds)</div></div>
+	<div class="fd_item_field"><input type="text" id="PYtitle" name="PYtitle" class="form-control m715-50" value="@Model.PYtitle" /></div>
+    </li>
+    <li class="fd_item">
+	<div class="fd_item_head"><div class="fd_alias">@B_Content.GetFieldAlias("TagKey", ds)</div></div>
+	<div class="fd_item_field">
+	    @*<div id="OAkeyword" class="border m50rem_50 p-1"></div>
+	    <input type="text" id="TagKey" name="TagKey" class="form-control" value="@Model.TagKey" class="none" /><span>(空格或回车键分隔，长度不超过10字符或5汉字)</span>*@
+        <div id="OAkeyword" class="border m50rem_50"></div>
+        <input type="text" id="Keywords" class="none" name="Keywords" value="@Model.TagKey" class="form-control" />
+        <small class="text-muted">(空格或回车键分隔，长度不超过10字符或5汉字)</small>
+	</div>
+    </li>
+    <li class="fd_item">
+	<div class="fd_item_head"><div class="fd_alias">@B_Content.GetFieldAlias("Subtitle", ds)</div></div>
+	<div class="fd_item_field"><input type="text" id="Subtitle" name="Subtitle" class="form-control m715-50" value="@Model.Subtitle" /></div>
+    </li>
+</ul>
+</div>
+</div>
+<div class="text-center add_qustion_subbtn">
+    <input type="button" class="btn btn-info btn_tijiao" value="确定"  data-toggle="modal" data-target="#exampleModalCenter"/>
+    <a href="MyContent?NodeID=@Model.NodeID" class="btn btn-outline-info" hidden>返回列表</a>
+</div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">提示</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body model_con">
+         <p>您的资料在2个工作日内会有审核结果，届时请进入“个人中心”中查看。是否提交资料？</p>
+      </div>
+      <div class="modal-footer model_con_link">
+        <button type="submit" class="btn btn-outline-success" >提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+<!--form end-->
+
+
+
+
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"侧边客服\"/}"))
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"网友提问\"/}"))
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"全站底部\"/}"))
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"仿公众号底部\"/}"))
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"四叶草插件\"/}"))
+<!--footer end-->
+<script>
+$(".navbar04").addClass("active");
+$(function(){
+	$(".carousel-inner .carousel-item:first-child").first().addClass('active');
+})
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+
+//狗狗品种
+$(".navbar01").addClass("active");
+
+$(".banner_xzqz").click(function(e){
+	$(this).addClass("active");
+	    $(document).one("click", function(){
+        $(".banner_xzqz").removeClass("active");
+    });
+    e.stopPropagation();
+});
+$(".banner_xzqz .list dd").click(function(e){
+	var ddqz = $(this).html();
+	$(".banner_xzqz .select_selected span").text(ddqz);
+	$(".banner_xzqz").removeClass("active");
+	e.stopPropagation();
+});
+$(".banner_xzqz .index li").click(function(){
+	$(this).siblings('li').removeClass('active');  // 删除其他兄弟元素的样式
+    $(this).addClass('active');  // 添加当前元素的样式
+	var index = $(this).attr('data-target');
+	var container = $(".list");
+    scrollTo = $(index);
+    container.scrollTop(scrollTo.offset().top - container.offset().top +container.scrollTop());
+});
+
+
+
+//信息填写判断
+$(function(){
+//判断问题提交还是认证提交
+if(@MvcHtmlString.Create(Call.GetLabel("{$GetRequest(ModelID)$}"))==51){
+$(".btn_tijiao").attr("type","submit");
+$(".btn_tijiao").attr("data-target","#exampleModalCenter1");
+$(".btn_tijiao").attr("value","提交问题");
+$("#addcon_title").empty().html("我要提问")
+$(".add_con_li").css("display","block");
+$(".con_quanzhonglist").css("display","block");
+}
+
+//判断当前用户认证提交是否已经认证过。
+var rzxx=$("#text_rz").val();
+if(@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"判断是否提交认证信息\" /}"))==1 && @MvcHtmlString.Create(Call.GetLabel("{$GetRequest(ModelID)$}"))==57 ){
+$(".add_qustion_subbtn input").click();
+$(".model_con").empty().html("<div class='alert alert-danger' role='alert'>您已提交信息，请耐心等待。</div>")
+$(".model_con_link").css("display","none");
+}
+
+
+//犬种信息录入
+$(".quanzhong_list_link dd").click(function(){
+ var title=$(this).text();
+ $("#fd_item_qz .fd_select").val(title);
+})
+
+$("#fd_item_qz").css("display","none");
+
+})
+
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+$(function(){
+//导航处理
+	$("#usernav1 ul li").removeClass("active").siblings().eq(1).addClass("active");
+})
+
+//知宠网标题提交
+$(function(){
+$("#txtTitle").attr("value","@MvcHtmlString.Create(Call.GetLabel("{ZL:GetuserName()/}"))")
+$("#txt_sqrkyid").attr("value","@MvcHtmlString.Create(Call.GetLabel("{ZL:GetuserID()/}"))")
+$("#txt_sqrkyid").parent().parent().css("display","none");
+})
+
+
+
+
+
+</script>
+}
+@section script{
+<script>
+    var zlconfig = {
+        adminPath: "@CustomerPageAction.customPath2",
+		updir: "@ZoomLa.Components.SiteConfig.SiteOption.UploadDir.ToLower()",
+		duptitlenum: "@ZoomLa.Components.SiteConfig.SiteOption.DupTitleNum",
+		modelid: "@Model.ModelID"
+};
+</script>
+<script src="/JS/OAKeyWord.js"></script>
+<script src="/JS/DatePicker/WdatePicker.js"></script>
+<script src="/JS/chinese.js"></script>
+<script src="/JS/Common.js"></script>
+<script src="/JS/Controls/ZL_Dialog.js"></script>
+<script src="/JS/ICMS/tags.json"></script>
+<script src="/JS/ZL_Content.js?v=20160514"></script>
+<script src="/JS/Plugs/transtool.js"></script>
+<script>
+    $(function () {
+        Tlp_initTemp();
+        $("#BaiduTrans_a").TransTools({ top: 120 });
+        $("#txt_Edit,#txt_pages").parents("tr").hide();
+        $("form").validate();
+    });
+    function OnTemplateViewCheck(value) { $("#TxtTemplate_hid").val(value); }
+</script>
+}

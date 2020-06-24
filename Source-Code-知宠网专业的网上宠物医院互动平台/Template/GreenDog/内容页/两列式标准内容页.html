@@ -1,0 +1,156 @@
+﻿{ZL.Source id="文章模型数据源标签"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="文章模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" />
+<meta name="Description" content="{SField sid="文章模型数据源标签" FD="Title" page="0"/}">
+{ZL:Boot4()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="/dist/css/animate.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="{$CssDir/}js/server.js"></script>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>	
+<script type="text/javascript" src="/JS/Controls/ZL_Dialog.js"></script>
+{ZL:GetCSS(1,0)/}
+</head>
+<body>
+<header>
+{ZL.Label id="全站头部"/}
+<section class="bs-header" >
+<div class="container">
+<span>{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}</span>
+</div>
+</section>
+</header>
+<!--herder end-->
+
+<div class="d-block d-sm-none phone_brand">
+<strong>{SField sid="文章模型数据源标签" FD="NodeName" page="0"/}</strong>
+<span>{ZL.Label id="获取节点说明" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}</span>
+<div class="bottom_mask">
+<div class="bottom_mask_t bottom_mask_top"><div class="mask_t_i mask_t_bg1"></div></div>
+<div class="bottom_mask_t bottom_mask_middle"><div class="mask_t_i mask_t_bg2"></div></div>
+<div class="bottom_mask_t bottom_mask_bottom"><div class="mask_t_i mask_t_bg3"></div></div>
+</div>
+</div>
+<!--phone end-->
+
+
+<div class="news_body">
+<div class="container con_new_warp">
+<div class="row">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 con_new_warp_c">
+<div class="news_mySites mybreadcrmb_con">
+<nav aria-label="breadcrumb" role="navigation">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">首页</a></li>
+{ZL.Label id="输出多级节点导航_V4" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" ShowNum="30" /}
+<li class="breadcrumb-item active">正文 </li>
+</ol>
+</nav>
+</div>
+<!--面包屑导航结束 -->
+
+
+<div class="myContent_l">
+<h1>{SField sid="文章模型数据源标签" FD="Title" page="0"/}</h1>
+<div class="myAbbr">
+  <span id="Hits">浏览数：<SCRIPT language=javascript src="/Common/GetHits.aspx?id={SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}"></SCRIPT> 
+<span id="favs"><a href="/user/content/addtofav?infoid={SField sid="文章模型数据源标签" FD="GeneralID"/}&type=1&title={SField sid="文章模型数据源标签" FD="Title" page="0"/}&url={$SiteURL/}/item/{SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}.aspx" target="_blank"><i class="zi zi_love" ></i> 收藏</a></SCRIPT>  <a href="/Class_100/NodePage.aspx?t={SField sid="文章模型数据源标签" FD="Title" page="0"/}-来自{$SiteName/}&urls={$SiteURL/}/item/{SField sid="文章模型数据源标签" FD="GeneralID" page="0"/}.aspx" target="_blank"><i class="zi  zi_sharealt"></i>分享网址</a></span>
+</div>
+<div class="myContent">{SField sid="文章模型数据源标签" FD="content" page="{SField sid="文章模型数据源标签" FD="K_pages" page="0"/}"/}</div>
+<div id="T_page">{ZL.Page id="默认内容分页标签" num="{SField sid="文章模型数据源标签" FD="pages" page="0"/}"/}</div>
+
+ <div id="begin">
+ <p id="asc">上一篇文章：{ZL.Label id="上一篇文章" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}</p> <p id="desc">下一篇文章：{ZL.Label id="下一篇文章" NodeID="{SField sid="文章模型数据源标签" FD="NodeID" page="0"/}" /}</p></div>
+{ZL:CopyRight({SField sid="文章模型数据源标签" FD="GeneralID" page="0"/})/}
+
+<div class="clearfix"></div>
+</div>
+
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 news_c_side">
+<div class="news_list">
+<div class="news_list_t con_news_t"><h2>分享</h2><div class="clearfix"></div></div>
+<div class="news_share">
+<div class="bdsharebuttonbox">
+<a class="bds_more" href="#" data-cmd="more"></a>
+<a title="分享到QQ空间" class="bds_qzone" href="#" data-cmd="qzone"></a>
+<a title="分享到新浪微博" class="bds_tsina" href="#" data-cmd="tsina"></a>
+<a title="分享到腾讯微博" class="bds_tqq" href="#" data-cmd="tqq"></a>
+<a title="分享到人人网" class="bds_renren" href="#" data-cmd="renren"></a>
+<a title="分享到微信" class="bds_weixin" href="#" data-cmd="weixin"></a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</div>
+</div>
+<div class="news_list hot_list hot_list">
+<div class="news_list_t"><h2>热门文章</h2><div class="clearfix"></div></div>
+<div class="news_list_c">
+<ul class="list-unstyled">
+{ZL.Label id="热点文章输出指定节点标题_不带点击" NodeID="1" TitleNum="28" ShowNum="10" /}
+</ul>
+</div>
+</div>
+<div id="about" class="news_list con_list_xg">
+<div class="news_list_t"><h2>相关文章</h2></div>
+<ul class="news_list_c">
+{ZL.Label id="相关文章列表输出" ShowNum="5" TitleNum="32" KeyWord="{SField sid="文章模型数据源标签" FD="Tagkey" page="0"/}" /}
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--主体结束 -->
+
+<div class="Assis_Div"></div>
+
+{ZL.Label id="全站底部"/}
+{ZL.Label id="网友提问"/}
+{ZL.Label id="侧边客服"/}
+{ZL.Label id="仿公众号底部"/}
+{ZL.Label id="四叶草插件"/}	
+<script>
+
+//轮播active
+$(function(){
+	$(".carousel-inner .carousel-item:first-child").first().addClass('active');
+})
+$(function(){
+	$(".solu-item-warp:nth-child(3)").addClass('solu-item-active');
+})
+
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+</script>
+</body>
+</html>
+

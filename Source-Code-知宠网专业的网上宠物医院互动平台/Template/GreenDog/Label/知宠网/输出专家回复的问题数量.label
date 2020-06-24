@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>354</LabelID>
+    <LabelName>输出专家回复的问题数量</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam>UID,0,1,用户ID</LabelParam>
+    <LabelTable>ZL_Comment</LabelTable>
+    <LabelField>Count(*) AS Num</LabelField>
+    <LabelWhere>ZL_Comment.UserID=@UID</LabelWhere>
+    <LabelOrder />
+    <LabelContent>{Field="Num"/}</LabelContent>
+    <LabelCount>10</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Comment","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

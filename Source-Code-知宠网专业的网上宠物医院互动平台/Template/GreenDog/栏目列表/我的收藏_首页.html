@@ -1,0 +1,103 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的收藏_{$SiteTitle/}</title>
+{$MetaKeywords/}
+{$MetaDescription/}
+{ZL:Boot4()/}
+<link href="{$CssDir/}global.css?id={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>	
+</head> 
+
+<body>
+<header>
+{ZL.Label id="全站头部"/}
+<section class="bs-header gask_Title">
+<div class="container">
+<h1>知宠网，这是解决问题的地方</h1>
+<a class="btn btn-light btn-lg gask_Title_btn" href="/user/Content/AddContent?NodeID=24&ModelID=51">快速提问</a>
+</div>
+</section>
+</header>
+<!--header end-->
+
+<div class="d-block d-sm-none phone_brand" hidden>
+<strong>我的收藏</strong>
+<span>你喜欢的这里都有</span>
+<div class="bottom_mask">
+<div class="bottom_mask_t bottom_mask_top"><div class="mask_t_i mask_t_bg1"></div></div>
+<div class="bottom_mask_t bottom_mask_middle"><div class="mask_t_i mask_t_bg2"></div></div>
+<div class="bottom_mask_t bottom_mask_bottom"><div class="mask_t_i mask_t_bg3"></div></div>
+</div>
+</div>
+<!--phone end-->
+
+
+<div class="container Collection_list">
+<div class="Collection_list_top"><strong><i class="zi zi_love"></i> 我的收藏</strong>
+<div class="dropdown show">
+  <a class="Collection_list_link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">全部</a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+    <a class="dropdown-item" href="{ZL:GetProposeinfo(24)/}?mid=2">文章</a>
+    <a class="dropdown-item" href="{ZL:GetProposeinfo(24)/}?mid=51">问答</a>
+    <a class="dropdown-item" href="{ZL:GetHotinfo(24)/}">全部</a>
+  </div>
+</div>
+</div>
+<ul>
+{ZL.Label id="输出收藏列表"  ShowNum="10" ConNum="120" /}
+</ul>
+
+</div>
+<!---->
+
+
+{ZL.Label id="全站底部"/}
+{ZL.Label id="网友提问"/}
+{ZL.Label id="侧边客服"/}
+{ZL.Label id="仿公众号底部"/}
+{ZL.Label id="四叶草插件"/}	
+<script>
+$(".navbar04").addClass("active");
+//轮播active
+$(function(){
+	$(".carousel-inner .carousel-item:first-child").first().addClass('active');
+})
+$(function(){
+	$(".solu-item-warp:nth-child(3)").addClass('solu-item-active');
+})
+
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+
+
+</script>
+</body>
+</html>

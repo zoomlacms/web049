@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>355</LabelID>
+    <LabelName>移动端底部</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;footer class="fixed-bottom mfooter"&gt;
+&lt;ul class="d-flex justify-content-around"&gt;
+  &lt;li class="navbar01"&gt;&lt;a  href="/"&gt;&lt;i class="zi zi_home" &gt;&lt;/i&gt;&lt;span&gt;首页&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="navbar02"&gt;&lt;a  href="{ZL:GetNodeLinkUrl(1)/}"&gt;&lt;i class="zi zi_stickynote" aria-hidden="true"&gt;&lt;/i&gt;&lt;span&gt;资讯中心&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="navbar03"&gt;&lt;a  href="{ZL:GetNodeLinkUrl(13)/}"&gt;&lt;i class="zi zi_squareHandCorrect" aria-hidden="true"&gt;&lt;/i&gt;&lt;span&gt;专家&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="navbar04"&gt;&lt;a  href="{ZL:GetNodeLinkUrl(24)/}"&gt;&lt;i class="zi zi_bubbleSquare" aria-hidden="true"&gt;&lt;/i&gt;&lt;span&gt;问答中心&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="navbar05"&gt;&lt;a  href="/wxpromo.aspx?r=/User"&gt;&lt;i class="zi zi_user" &gt;&lt;/i&gt;&lt;span&gt;会员中心&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/footer&gt; </LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

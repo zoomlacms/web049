@@ -1,0 +1,37 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>360</LabelID>
+    <LabelName>获取当前用户的所有问题</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam>NodeID,0,1,节点ID|ConNum,50,1,简介长度|TitleNum,30,1,标题长度|ShowNum,10,1,显示个数</LabelParam>
+    <LabelTable>ZL_CommonModel LEFT JOIN ZL_C_Gask ON ZL_CommonModel.ItemID=ZL_C_Gask.ID</LabelTable>
+    <LabelField>GeneralID,Title,dbo.ZL_StripeTrimstr(content) as con</LabelField>
+    <LabelWhere>( NodeID=@NodeID or FirstNodeID=@NodeID)   And ZL_CommonModel.Status=99  And SuccessfulUserID={ZL:GetuserID()/}</LabelWhere>
+    <LabelOrder>ZL_CommonModel.CreateTime DESC</LabelOrder>
+    <LabelContent>{Repeate}
+&lt;li&gt;&lt;small&gt;&lt;i class="zi zi_questioncircle"&gt;&lt;/i&gt;  {ZL:CutText({Field="con"/},@ConNum,...)/}&lt;/small&gt;
+&lt;div class="myquestion_li"&gt;
+  {ZL.Label id="判断是否回复" Gid="{Field="GeneralID"/}" /}
+  &lt;a href="{ZL:GetInfoUrl({Field="GeneralID"/})/}"&gt;全部  &lt;i class="zi zi_pathRight"&gt;&lt;/i&gt;&lt;/a&gt;&lt;/div&gt; 
+&lt;/li&gt;
+{/Repeate}</LabelContent>
+    <LabelCount>@ShowNum</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_CommonModel","tb_s":"ZL_C_Gask"}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

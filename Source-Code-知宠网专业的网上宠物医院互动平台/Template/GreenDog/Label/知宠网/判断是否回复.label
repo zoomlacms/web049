@@ -1,0 +1,31 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>361</LabelID>
+    <LabelName>判断是否回复</LabelName>
+    <LabelType>2</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam>Gid,0,1,内容ID</LabelParam>
+    <LabelTable>ZL_Comment</LabelTable>
+    <LabelField>*</LabelField>
+    <LabelWhere> ZL_Comment.GeneralID=@Gid</LabelWhere>
+    <LabelOrder />
+    <LabelContent>&lt;label&gt;&lt;i class="zi zi_commentdots"&gt;&lt;/i&gt; 已回复&lt;/label&gt;</LabelContent>
+    <LabelCount>1</LabelCount>
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent>&lt;label&gt;&lt;i class="zi zi_commentdots"&gt;&lt;/i&gt; 未回复&lt;/label&gt;</EmptyContent>
+    <DataSourceType>{"ds_m":"main","ds_s":"main","tb_m":"ZL_Comment","tb_s":""}</DataSourceType>
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

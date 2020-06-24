@@ -1,0 +1,42 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>364</LabelID>
+    <LabelName>四叶草插件</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;section class="d-block  d-sm-none"&gt;
+  &lt;div class="mask_menu" style="display:none;"&gt;&lt;/div&gt;
+  &lt;div class="menu" id="menufloat"&gt;&lt;i class="zi zi_thlarge icon-menu"&gt;&lt;/i&gt;&lt;/div&gt;
+  &lt;div class="menu-c" id="menufloat-c" style="display:none;"&gt;
+    &lt;div class="menu-c-out"&gt;
+      &lt;div class="menu-c-inner"&gt; &lt;a class="a-home" href="/" title="首页"&gt;&lt;/a&gt; &lt;a class="a-tel" href="tel:18888888888" title="客服"&gt;&lt;/a&gt; &lt;a id="serviceUrl" class="a-server" href="/user/Content/AddContent?NodeID=24&amp;ModelID=51" title="提问"&gt;&lt;/a&gt; &lt;a class="a-member" href="/wxpromo.aspx?r=/user" title="会员中心"&gt;&lt;/a&gt; &lt;a class="a-search" href="/Class_24/Default.aspx" title="搜索"&gt;&lt;/a&gt; &lt;a class="a-cart" href="/Cart/Cart.aspx" title="购物车"&gt;&lt;/a&gt; &lt;a class="a-collect" href="/Class_9/Default.aspx" id="collect-link" title="喂养"&gt;&lt;/a&gt; &lt;/div&gt;
+	  &lt;!--收藏可以改为留言，指向gesut--&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;script src="{$CssDir/}js/foru.js"&gt;&lt;/script&gt;
+&lt;!--四叶草 end--&gt; </LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

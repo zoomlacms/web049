@@ -1,0 +1,118 @@
+{ZL.Source id="专家模型数据源标签"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{SField sid="专家模型数据源标签" FD="Title" page="0"/}_{$SiteName/}</title>
+<meta name="Keywords" content="{SField sid="专家模型数据源标签" FD="Tagkey" page="0"/}" />
+<meta name="Description" content="{SField sid="专家模型数据源标签" FD="Title" page="0"/}">
+{ZL:Boot4()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="/dist/css/animate.min.css" rel="stylesheet"/>
+<script src="/js/scrolltopcontrol.js" type="text/javascript"></script>
+<script type="text/javascript" src="{$CssDir/}js/server.js"></script>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>	
+<script type="text/javascript" src="/JS/Controls/ZL_Dialog.js"></script>
+{ZL:GetCSS(1,0)/}
+</head>
+<body>
+<header>
+{ZL.Label id="全站头部"/}
+
+<section class="bs-header" >
+<div class="container">
+<span>{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="专家模型数据源标签" FD="NodeID" page="0"/}" /}</span>
+
+</div>
+
+</section>
+
+</header>
+<!--内页通栏banner广告位 -->
+<div class="news_body zj_content">
+<div class="container">
+<div class="news_mySites  zhuanjia_breadcrumb">
+<nav aria-label="breadcrumb" role="navigation">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">首页</a></li>
+{ZL.Label id="输出多级节点导航_V4" NodeID="{SField sid="专家模型数据源标签" FD="NodeID" page="0"/}" ShowNum="30" /}
+<li class="breadcrumb-item active">{SField sid="专家模型数据源标签" FD="Title" page="0"/}</li>
+</ol>
+</nav>
+</div>
+<!--面包屑导航结束 -->
+<div class="myContent_l">
+<h1>{ZL.Label id="输出指定ID节点名" NodeID="{SField sid="专家模型数据源标签" FD="NodeID" page="0"/}" /}——{SField sid="专家模型数据源标签" FD="Title" page="0"/}</h1>
+<div class="myContent">
+<div class="zjtx_img"><img src="{ZL:GetPicUrl({SField sid="专家模型数据源标签" FD="pic" page="0"/})/}" alt=""></div>
+<div class="zj_info">
+<div class="zjm"><span>专家名：</span>{SField sid="专家模型数据源标签" FD="Title" page="0"/}</div>
+<div class="wts"><span>回答问题数:</span>{ZL.Label id="输出专家回复的问题数量" UID="20" /}</div>
+<div class="jrsj"><span>加入时间：</span>{ZL.Label id="查询指定UID会员加入时间" UID="{SField sid="专家模型数据源标签" FD="bdky" page="0"/}" /}</div>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="zjjs"><span>专家介绍：</span>{SField sid="专家模型数据源标签" FD="content" page="0"/}</div>
+<div class="zjpx_reply">
+<span>专家【{SField sid="专家模型数据源标签" FD="Title" page="0"/}】参与过的问题列表:</span>
+<div class="reply_list">
+{ZL.Label id="输出用户评论过的问题列表" UID="{SField sid="专家模型数据源标签" FD="bdky" page="0"/}" TitleNum="200" ShowNum="5" /}
+</div>
+</div>
+ <div id="begin" class="zhuanjia_link">
+ <p id="asc">上一位专家：{ZL.Label id="上一篇文章" NodeID="{SField sid="专家模型数据源标签" FD="NodeID" page="0"/}" /}</p> <p id="desc">下一位专家：{ZL.Label id="下一篇文章" NodeID="{SField sid="专家模型数据源标签" FD="NodeID" page="0"/}" /}</p></div>
+{ZL:CopyRight({SField sid="专家模型数据源标签" FD="GeneralID" page="0"/})/}
+
+<div class="clearfix"></div>
+</div>
+
+</div>
+</div>
+<!--主体结束 -->
+
+<div class="Assis_Div"></div>
+{ZL.Label id="全站底部"/}
+{ZL.Label id="网友提问"/}
+{ZL.Label id="侧边客服"/}
+{ZL.Label id="仿公众号底部"/}
+{ZL.Label id="四叶草插件"/}	
+<script>
+$(".navbar03").addClass("active");
+//轮播active
+$(function(){
+	$(".carousel-inner .carousel-item:first-child").first().addClass('active');
+})
+$(function(){
+	$(".solu-item-warp:nth-child(3)").addClass('solu-item-active');
+})
+
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+</script>
+</body>
+</html>
+

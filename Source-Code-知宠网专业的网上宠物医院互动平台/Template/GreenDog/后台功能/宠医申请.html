@@ -1,0 +1,41 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>宠医申请_{$SiteName/}</title>
+{ZL:Boot4()/}
+<link rel="stylesheet" href="/App_Themes/V4style.css?v=0ff34de20180606" />
+
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<script type="text/javascript" src="{$CssDir/}js/server.js"></script>
+<script src="/JS/Controls/B_User.js"></script>
+<style>
+.shop_top { position:relative; z-index:111;}
+.shop_top .navbar-default { background:#FFF;}
+.shop_top .navbar-nav > li:nth-last-child(2) > a,.shop_top .navbar-nav > li:nth-last-child(1) > a { font-size:1em;}
+#home_nav { position: relative;}
+</style>
+</head> 
+<body>
+
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">系统ID</th>
+      <th scope="col">申请人</th>
+      <th scope="col">申请人ID</th>
+      <th scope="col">申请时间</th>
+      <th scope="col">申请详情</th>
+	  <th scope="col">审批操作</th>
+    </tr>
+  </thead>
+  <tbody>
+{ZL.Label id="宠医申请_审核列表" NodeID="30" ShowNum="20" /}
+  </tbody>
+</table>
+
+
+</body>
+</html>

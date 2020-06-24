@@ -1,0 +1,17 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+<!DOCTYPE html>
+<html>
+<head>
+@Html.Partial("_layout_assets")
+<link href="/App_Themes/V4user.css?version=@(ZoomLa.BLL.BLLCommon.Version_JS)" rel="stylesheet"/>
+@RenderSection("head")
+</head>
+<body>
+<div class="sys_header_top">@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"全站头部\"/}"))</div>
+
+@RenderSection("content")
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"仿公众号底部\"/}"))
+@MvcHtmlString.Create(Call.GetLabel("{ZL.Label id=\"四叶草插件\"/}"))
+@RenderSection("script")
+</body>
+</html>

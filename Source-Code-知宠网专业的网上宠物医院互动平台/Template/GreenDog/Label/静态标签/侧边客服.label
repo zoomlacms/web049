@@ -1,0 +1,85 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>326</LabelID>
+    <LabelName>侧边客服</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>静态标签</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;div class="home_kefu"&gt;
+&lt;ul&gt;
+&lt;li&gt;
+  &lt;a href="javascript:;"&gt;&lt;i class="zi zi_phonevolume" &gt;&lt;/i&gt;&lt;/a&gt;
+&lt;div class=" home_kefu_item" style="bottom:13rem;"&gt;
+&lt;div class="home_kefu_cb"&gt;
+&lt;a href="tel:400-111-9999 "&gt;
+&lt;p&gt; 拨打电话&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;a href="javascript:;"&gt;&lt;i class="zi zi_tmQq"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;div class=" home_kefu_item" style="bottom:13rem;"&gt;
+&lt;div class="home_kefu_cb"&gt;
+&lt;a href=""&gt;
+&lt;p&gt; 联系QQ&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;a href="javascript:;"&gt;&lt;i class="zi zi_bubbleSquare" &gt;&lt;/i&gt;&lt;/a&gt;
+&lt;div class=" home_kefu_item" style="bottom:13rem;"&gt;
+&lt;div class="home_kefu_cb"&gt;
+&lt;a href="/Guest"&gt;
+&lt;p&gt;留言咨询&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;a href="javascript:;"&gt;&lt;i class="zi zi_tmWeixin" &gt;&lt;/i&gt;&lt;/a&gt;
+&lt;div class=" home_kefu_item" style="bottom:13rem;"&gt;
+&lt;div class="home_kefu_cb"&gt;
+&lt;a href=""&gt;
+&lt;p&gt;微信&lt;/p&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+  &lt;a href="javascript:;"&gt;&lt;i class="zi zi_qrcode"&gt;&lt;/i&gt;&lt;/a&gt;
+&lt;div class=" home_kefu_item home_kefu_items" style="bottom:13rem;"&gt;
+&lt;div class="home_kefu_cb"&gt;
+&lt;a href="javasrcipt:;"&gt;
+&lt;img src="{$CssDir/}Images/QRcode.jpg" alt="微信二维码" width="155"&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;!--kefu end--&gt;</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>

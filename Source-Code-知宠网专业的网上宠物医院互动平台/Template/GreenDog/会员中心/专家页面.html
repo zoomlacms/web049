@@ -1,0 +1,97 @@
+﻿{ZL.Source id="节点栏目信息数据源"/}<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>专家主页</title>
+<meta name="Keywords" content="{SField sid="节点栏目信息数据源" FD="Meta_Keywords" page="0"/}" />
+<meta name="description" content="{SField sid="节点栏目信息数据源" FD="Meta_Description" page="0"/}" />
+{ZL:Boot4()/}
+<link href="{$CssDir/}global.css?Version={ZL.Label id="前端样式版本号"/}" rel="stylesheet"/>
+<link href="/dist/css/animate.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="/dist/css/weui.min.css" />
+<script type="text/javascript" src="{$CssDir/}js/server.js"></script>
+<link href="/dist/css/swiper.min.css" rel="stylesheet"/>
+<script src="/dist/js/swiper.min.js"></script>	
+</head> 
+<body>
+<header class="zhuanjia_header">
+{ZL.Label id="全站头部"/}
+</header>
+<!--header end-->
+
+<section class="zhuanjia_gird">
+<div class="zhuanjia_gird_top">
+<span>专家名：{ZL:GetuserName()/}  </span><span> 注册时间：{ZL.Label id="输出注册时间" /}</span>
+</div>
+<div class="weui-grids">
+<a href="/user/info/UserBase" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_usermd"></i></div><p class="weui-grid__label">我的信息</p></a>
+<!--<a href="javascript:;" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_commentalt"></i></div><p class="weui-grid__label">我的评论</p></a>-->
+<a href="{ZL:GetNodeLinkUrl(1)/}" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_paper"></i></div><p class="weui-grid__label">最新资讯</p></a>
+<a href="/Class_24/NodeHot.aspx" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_squareHandCorrect"></i></div><p class="weui-grid__label">我的收藏</p></a>
+<a href="{ZL:GetLastinfo(24)/}" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_questioncircle"></i></div><p class="weui-grid__label">最新提问</p></a>
+<a href="{ZL:GetNodeLinkUrl(24)/}" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_calendar"></i></div><p class="weui-grid__label">问题中心</p></a>
+<a href="{ZL:GetLastinfo(13)/}?uid={ZL:GetuserID()/}" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_replyall"></i></div><p class="weui-grid__label">我参与的问题</p></a>
+<!--<a href="javascript:;" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_moneybillalt"></i></div><p class="weui-grid__label">打赏明细</p></a>-->
+<a href="tel:15000000000" class="weui-grid"><div class="weui-grid__icon"><i class="zi zi_service"></i></div><p class="weui-grid__label">联系客服</p></a>
+</div>
+</section>
+<!--gird end-->
+
+<section class="container zhuanjia_list">
+<strong><i class="zi zi_verFlag"></i> 最新资讯</strong>
+<ul>
+{ZL.Label id="输出专家页最新问题" Node="2" ShowNum="10" ConNum="50" TitleNum="30" /}
+</ul>
+</section>
+<!--list end-->
+
+
+<div class="zhuanjia_bottom"></div>
+{ZL.Label id="仿公众号底部"/}
+{ZL.Label id="四叶草插件"/}	
+<script>
+//轮播active
+$(function(){
+	$(".carousel-inner .carousel-item:first-child").first().addClass('active');
+})
+$(function(){
+	$(".solu-item-warp:nth-child(3)").addClass('solu-item-active');
+})
+
+//头部导航滚动变化
+$(window).scroll(function(){
+	if($(window).scrollTop()>0){
+		$(".home_navbar").addClass("bg_green")
+	}
+	else{
+		$(".home_navbar").removeClass("bg_green");
+	}
+});
+
+/*Swiper插件滚动*/
+var swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  autoplay: {
+	delay: 3000,
+  },
+});	
+
+//在线客服
+$(".home_kefu_ct i").click(function(){
+	$(this).parent().parent().parent().removeClass("active");
+});
+$(".home_kefu li:nth-child(6) a").click(function(){
+	$body=(window.opera)? (document.compatMode=="CSS1Compat"? $('html') : $('body')) : $('html,body')
+	$body.animate({scrollTop:0},1000);
+});
+
+//用户组识别
+if({ZL.Label id="获取当前用户组" /}==1){
+alert("提示：你不是专家医生，系统将引您进入会员中心");
+window.location.href = "/User";
+}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" standalone="yes"?>
+<NewDataSet>
+  <Table>
+    <LabelID>347</LabelID>
+    <LabelName>药品领取_法律声明</LabelName>
+    <LabelType>1</LabelType>
+    <LabelCate>知宠网</LabelCate>
+    <LabelDesc />
+    <LabelParam />
+    <LabelTable />
+    <LabelField />
+    <LabelWhere />
+    <LabelOrder />
+    <LabelContent>&lt;p&gt;1.我们提供的药品领取的服务是免费的，但是由于邮寄等原因邮包及服务费用需要用户自己承担。&lt;/p&gt;
+&lt;p&gt; 2.我们提供的药物针对特定症状，在不确定病因的情况下请不要随意令宠物服用，如有意外平台概不负责。&lt;/p&gt;
+&lt;p&gt; 3.在领取药品之前，我们建议用户在问答中心咨询专家后再进行药品领取，以免错服。&lt;/p&gt;
+&lt;p&gt; 4.我们提供的药品并不用于商用，如发现收费情况请立即举报并向我们反馈。&lt;/p&gt;
+</LabelContent>
+    <LabelCount />
+    <LabelAddUser>0</LabelAddUser>
+    <LabelNodeID>0</LabelNodeID>
+    <Modeltypeinfo>参数判断</Modeltypeinfo>
+    <addroot />
+    <setroot>等于</setroot>
+    <Modelvalue />
+    <Valueroot />
+    <IsOpen>0</IsOpen>
+    <FalseContent />
+    <EmptyContent />
+    <DataSourceType />
+    <ConnectString />
+    <ProceName />
+    <ProceParam />
+  </Table>
+</NewDataSet>
